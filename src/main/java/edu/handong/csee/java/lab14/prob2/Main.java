@@ -1,13 +1,11 @@
-package edu.handong.csee.java.lab14.prob2;
+package edu.handong.csee.java.lab14.prob2; //package name
 
-import java.util.Scanner;
+public class Main { //Main class		
 
-public class Main {
-
-	public static void main(String[] args) {
+	public static void main(String[] args) { //starts this program
 		
-		In_exception obj = new In_exception();
-		obj.error();
+		In_exception obj = new In_exception(); //instantiate 
+		obj.error(); //call error method
 		
 		
 
