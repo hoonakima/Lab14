@@ -6,7 +6,7 @@ public class CustomID { //Customizing ID information class
 	private int age = 1; //age data
 	private String race; //race data
 	static private String[] validRaces = new String[] {"Vulcans", "Romulan", "Klingons"}; //valid race data
-	private int state = 0; //state data for distinguishing each data
+	static private int state = 0; //state data for distinguishing each data. It is for all data, so it should be static 
 
 	public CustomID() { //constructor
 

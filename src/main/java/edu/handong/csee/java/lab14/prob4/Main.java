@@ -5,7 +5,7 @@ import java.util.Scanner; //import Scanner class
 public class Main { //Main class
 
 	public static void main(String[] args) { //starts this program
-		
+
 		boolean repeat = true; //it makes to start the while loop
 
 		try { //try block to throw exceptions

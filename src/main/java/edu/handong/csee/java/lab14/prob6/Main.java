@@ -7,7 +7,7 @@ public class Main { //Main class
 	public static void main(String[] args) { //starts this program
 
 		boolean repeat = true;  //indicates whether repeat or not
-		
+
 		while(repeat) { //iterates the loop until repeat is true 
 			try { //try block 
 				Scanner in = new Scanner(System.in); //instantiation
