@@ -1,40 +1,39 @@
-package edu.handong.csee.java.lab14.prob6;
+package edu.handong.csee.java.lab14.prob6; //package name
 
-import java.util.Scanner;
+import java.util.Scanner; //import Scanner class
 
-public class Main {
+public class Main { //Main class
 
-	static boolean repeat = true;
+	public static void main(String[] args) { //starts this program
 
-	public static void main(String[] args) {
+		boolean repeat = true;  //indicates whether repeat or not
+		
+		while(repeat) { //iterates the loop until repeat is true 
+			try { //try block 
+				Scanner in = new Scanner(System.in); //instantiation
+				CustomID myCustomID = new CustomID(); //instantiation
+				int state = myCustomID.getState(); //set state value by getting the value from CustomID class
 
-		Main tester = new Main();
-		while(repeat) {
-			try {
-				Scanner in = new Scanner(System.in);
-				CustomID myCustomID = new CustomID();
-				int state = myCustomID.getState();
-
-				if(state == 0) {
-					System.out.print("Enter your name: ");
-					String name = in.nextLine();
-					myCustomID.receiveName(name);
+				if(state == 0) { //when state is zero, which means it covers name data
+					System.out.print("Enter your name: "); //print the line
+					String name = in.nextLine(); //get name data
+					myCustomID.receiveName(name); //call receiveName method
 				}
-				else if(state == 1) {
+				else if(state == 1) { //when state is one, which means it covers age data
 
-					System.out.print("Enter your age: ");
-					int age = in.nextInt();
-					myCustomID.receiveAge(age);
+					System.out.print("Enter your age: "); //print the line 
+					int age = in.nextInt(); //get age data
+					myCustomID.receiveAge(age); //call receiveAge method
 				}
-				else if(state == 2){
-					System.out.print("Enter your race: ");
-					String race = in.nextLine();
-					myCustomID.receiveRace(race);
+				else if(state == 2){ //when state is two, which means it covers race data
+					System.out.print("Enter your race: "); //print the line
+					String race = in.nextLine(); //get race data
+					myCustomID.receiveRace(race); //call receiveRace method
 				}
 			}
-			catch(Exception e) {
-				System.out.println(e.getMessage());
-				repeat = true;
+			catch(Exception e) { //catch a created Exception
+				System.out.println(e.getMessage()); //print the message
+				repeat = true; //repeat the loop
 			}
 		}
 	}
